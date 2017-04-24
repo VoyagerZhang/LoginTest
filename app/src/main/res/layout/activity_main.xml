@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <data>
+    <variable
+      name="event"
+      type="com.ant.logintest.Evetbind" />
+
+  </data>
+
+  <RelativeLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <EditText
+      android:id="@+id/name"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="38dp"
+      android:layout_alignParentTop="true"
+      android:layout_centerHorizontal="true"
+      android:addTextChangedListener="@{event.namewatcher}"
+      android:ems="10"
+      android:hint="请输入账号"
+      android:inputType="textPersonName" />
+    <EditText
+      android:id="@+id/password"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="37dp"
+      android:layout_alignEnd="@+id/name"
+      android:layout_alignRight="@+id/name"
+      android:layout_below="@+id/name"
+      android:addTextChangedListener="@{event.passwordwatcher}"
+      android:ems="10"
+      android:hint="请输入密码"
+      android:inputType="textPassword" />
+    <Button
+      android:id="@+id/login"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="62dp"
+      android:layout_alignParentBottom="true"
+      android:layout_centerHorizontal="true"
+      android:onClick="login"
+      android:text="登陆" />
+  </RelativeLayout>
+</layout>
